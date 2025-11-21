@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
 
 :root {
-    --color-body: #799a9f;
-    --color-heading: #eef3db;
-    --color-base: #000F1A;
-    --color-base2: #00060A;
-    --color-brand: #C576E8;
-    --color-brand2: #CB66F8;
+    --color-body: #d1d9e6;
+    --color-heading: #f5f7fb;
+    --color-base: #0f1b2a;
+    --color-base2: #0a121d;
+    --color-brand: #ff8a3d;
+    --color-brand2: #ffb36b;
     --sidbar-width: 240px;
     --font-base: "Bai Jamjuree";
 }
@@ -20,6 +20,10 @@ body {
 h1,h2,h3,h4,h5,h6 {
     color: var(--color-heading);
     font-weight: 700;
+}
+
+p {
+    margin-bottom: 0.75rem;
 }
 
 a {
@@ -52,7 +56,7 @@ img {
     justify-content: center;
     padding-top: 80px;
     padding-bottom: 80px;
-    border-bottom: 2px solid rgba(255,255,255, 0.1);
+    border-bottom: 2px solid rgba(255,255,255, 0.08);
 }
 
 .shadow-effect {
@@ -72,6 +76,20 @@ img {
     font-size: 32px;
     background-color: var(--color-brand);
     color: var(--color-base);
+}
+
+.pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: rgba(255, 138, 61, 0.14);
+    color: var(--color-brand);
+    border-radius: 999px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    font-size: 13px;
 }
 
 /* NAVBAR */
@@ -97,7 +115,7 @@ img {
     .navbar {
         min-height: 100vh;
         width: var(--sidbar-width);
-        background: linear-gradient(#000F1A, #00060A), url(../images/sidebar-img.jpg);
+        background: linear-gradient(180deg, rgba(15, 27, 42, 0.95), rgba(10, 18, 29, 0.95)), url(../images/sidebar-img.jpg);
         background-size: cover;
         background-position: center;
     }
@@ -121,13 +139,13 @@ img {
 .btn-brand {
     background-color: var(--color-brand);
     border-color: var(--color-brand);
-    color: var(--color-base);
+    color: var(--color-base2);
 }
 
 .btn-brand:hover,
 .btn-brand:focus {
     background-color: var(--color-brand2);
-    color: var(--color-base);
+    color: var(--color-base2);
     border-color: var(--color-brand2);
 }
 
@@ -185,10 +203,6 @@ img {
 }
 
 /* SOCIAL ICONS */
-.social-icons {
-
-}
-
 .social-icons a {
     width: 40px;
     height: 40px;
@@ -198,4 +212,10 @@ img {
     background-color: var(--color-base);
     border-radius: 100px;
     font-size: 24px;
+    color: var(--color-heading);
+}
+
+.social-icons a:hover {
+    color: var(--color-base);
+    background-color: var(--color-brand);
 }
